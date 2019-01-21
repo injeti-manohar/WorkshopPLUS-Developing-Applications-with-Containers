@@ -1,0 +1,63 @@
+﻿------------------------------------
+LAB 3 ADVANCED DOCKER
+------------------------------------
+"File created on the host: $(hostname)" >> C:\MyData\file.txt
+gc C:\MyData\file.txt
+docker run -it -v C:/MyData/:C:/Data/ microsoft/nanoserver powershell
+dir
+dir c:\data
+gc c:\data\file.txt
+"File is updated by container: $(hostname)" >> C:\data\file.txt
+gc c:\data\file.txt
+exit
+gc C:\MyData\file.txt
+docker inspect CONTAINER ID
+docker volume create -d local myvolume2
+docker volume ls
+docker inspect myvolume
+docker run -it -v myvolume:C:/Data/ microsoft/nanoserver powershell
+dir
+"File created on the host $(hostname)" >> c:\data\sample.txt
+gc c:\data\sample.txt
+exit
+gc C:\\ProgramData\\docker\\volumes\\myvolume\\_data\sample.txt
+
+
+cd C:\labs\module3\compose
+docker stop (docker ps -aq)
+dir
+gc .\mywebapp\Controllers\HomeController.cs
+gc .\docker-compose.yml
+docker-compose.exe up -d
+docker ps
+docker inspect <Container ID of Web App> | FINDSTR "IPAddress"
+
+docker-compose.exe down
+
+Get-ContainerNetwork
+docker network ls
+docker network inspect nat
+docker run -d microsoft/nanoserver ping -t localhost
+docker network inspect nat
+ipconfig
+net stop docker
+Get-ContainerNetwork | Remove-ContainerNetwork -Force
+New-Item -ItemType file -Path C:\ProgramData\docker\config -Name daemon.json
+notepad C:\ProgramData\docker\config\daemon.json
+net start docker
+docker network create -d nat --subnet=192.168.15.0/24 --gateway=192.168.15.1 custom-nat
+docker network ls
+docker run -d --network=custom-nat microsoft/nanoserver ping -t localhost
+docker network inspect custom-nat
+ping <<Container - IPv4 Address >>
+net stop docker
+Get-ContainerNetwork | Remove-ContainerNetwork –Force
+Remove-Item C:\ProgramData\docker\config\daemon.json
+net start docker
+Get-ContainerNetwork
+
+docker run -it -m 500M -v C:/labs/module3/tools/:C:/tools/ microsoft/windowsservercore powershell
+
+Get-WmiObject –class Win32_processor | Select -ExpandProperty NumberOfCores
+
+docker run -it --cpus 1.0 -v C:/labs/module3/tools/:C:/tools/ microsoft/windowsservercore powershell

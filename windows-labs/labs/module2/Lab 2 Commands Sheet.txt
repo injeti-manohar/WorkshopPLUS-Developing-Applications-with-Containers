@@ -1,0 +1,60 @@
+------------------------------------
+LAB 2 WINDOWS CONTAINERS
+------------------------------------
+**step 2 page 10
+
+cd C:\labs\module2\
+docker images
+hostname
+docker run -it microsoft/windowsservercore 'CMD'
+hostname
+exit
+docker run -it microsoft/nanoserver 'CMD'
+hostname
+exit
+
+cd .\labs\module2\iis\
+Notepad .\Dockerfile
+docker build -t myiis:v1 .
+docker run -d -p 80:80 myiis:v1
+
+cd / ; cd .\labs\module2\aspnet4.5\
+docker stop (docker ps -a -q) ; docker rm (docker ps -a -q)
+notepad .\Dockerfile
+docker build -t aspnetapp:v4.5 .
+docker run -d -p 80:80 aspnetapp:v4.5
+
+cd / ; cd .\labs\module2\sqlserver2016\
+docker stop (docker ps -a -q) ; docker rm (docker ps -a -q)
+notepad .\command.txt
+docker run -d -p 1433:1433 -e sa_password=P@ssw0rd -e ACCEPT_EULA=Y -v C:/labs/module2/sqlserver2016/:C:/temp/ -e attach_dbs="[{'dbName':'WebAppLegacyDB','dbFiles':['C:\\temp\\WebAppLegacyDB.mdf','C:\\temp\\WebAppLegacyDB.ldf']}]" microsoft/mssql-server-windows-express
+docker ps
+docker exec -it CONTIANER ID sqlcmd
+
+SELECT name FROM master.dbo.sysdatabases
+go
+
+USE WebAppLegacyDB
+SELECT * FROM SYS.TABLES
+GO
+
+SELECT Email FROM AspNetUsers
+GO
+
+docker exec -it CONTAINER ID powershell
+ipconfig
+exit
+
+cd C:\labs\module2\aspnet4.5\WebAppLegacy\
+notepad .\web.config
+
+cd ..
+
+docker build -t aspnetapp:v4.5-with-db .
+docker run -d -p 80:80 aspnetapp:v4.5-with-db
+
+cd / ; cd C:\labs\module2\aspnetcore\
+docker stop (docker ps -a -q) ; docker rm (docker ps -a -q)
+notepad .\Dockerfile
+docker build --build-arg source=bin\Debug\netcoreapp1.1\publish -t myaspcoreapp:v1 .
+docker run -d -p 9090:9090 myaspcorewebapp:v1

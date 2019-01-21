@@ -1,0 +1,77 @@
+------------------------------------
+LAB 1 Introduction to Containers
+------------------------------------
+sudo -i
+
+Exercise 1:
+docker pull tutum/wordpress
+docker images
+docker run -d -p 80:80 tutum/wordpress
+docker ps
+docker run -d -p 8080:80 tutum/wordpress
+docker run -d -p 9090:80 tutum/wordpress 
+docker ps
+docker run --name mycontainer1 -d -p 8081:80 tutum/wordpress
+docker ps
+
+
+Exercise 2:
+docker ps
+docker stop <<CONTAINER-ID>>
+docker ps -a
+docker start <<CONTAINER-ID>>
+docker ps
+docker rm –f <<CONTAINER-ID>>
+docker stop $(docker ps -aq)
+docker images
+docker rmi <<IMAGE ID>> -f
+docker images
+
+Exercise 3:
+
+1. nodejs
+cd ~/labs/module1/nodejs
+ls
+nano Dockerfile
+docker build -t mynodejs .
+docker images
+docker run -d -p 8080:8080 mynodejs
+
+2. nginx
+cd ~/labs/module1/nginx
+nano Dockerfile
+docker build -t mynginx .
+docker history mynginx
+docker images
+docker run -d -p 80:80 mynginx
+
+3. ASP.NET Core 2.x
+cd ~/labs/module1/aspnetcore
+nano Dockerfile
+docker build -t myaspcoreapp:2.0 . 
+docker run -d -p 8090:80 myaspcoreapp:2.0
+
+Exercise 4:
+docker ps 
+docker exec -it <<CONTAINER ID OR NAME>> bash
+ls
+apt-get update
+apt-get install nano
+nano server.js
+exit
+docker stop <<CONTAINER ID>> 
+docker start <<CONTAINER ID>>
+docker commit <<CONTAINER ID>> mynodejsv2
+docker images
+docker run -d -p 8081:8080 mynodejsv2
+
+Exercise 5:
+docker tag <<IMAGE ID or IMAGE NAME>> mynodejs:v1
+docker images
+cd ~/labs/module1/nginx
+docker build -t nginxsample:v1 .
+docker images
+
+
+
+
