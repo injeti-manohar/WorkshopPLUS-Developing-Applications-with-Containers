@@ -11,7 +11,7 @@ Developing Applications with Containers is a four-day immersive course with blen
 
 ### Workshop
 
-This workshop will help you meet today’s and tomorrow’s challenges by acquiring knowledge on Linux and Windows Containers. Understanding the “Containerization” process, using containers to design and develop Microservices, and Clustering & Orchestration Tools, including Kubernettes, Swarm and DC/OS. Implement CI/CD pipeline for Containerized Applications using VSTS/TFS to build, publish and trigger deployments. Lastly you will learn about monitoring and troubleshooting containers. 
+This workshop will help you meet today’s and tomorrow’s challenges by acquiring knowledge on Linux and Windows Containers. Understanding the “Containerization” process, using containers to design and develop Microservices, and Clustering & Orchestration Tools, including Kubernettes, Swarm and DC/OS. Implement CI/CD pipeline for Containerized Applications using Azure DevOps to build, publish and trigger deployments. Lastly you will learn about monitoring and troubleshooting containers. 
 
 ### Proof of Concept (POC)
 
