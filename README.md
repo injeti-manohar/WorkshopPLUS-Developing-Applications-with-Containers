@@ -24,10 +24,14 @@ In this hand-on lab, you will be challenged to implement an end-to-end scenario 
 ### Technologies used
 
 - Docker
+- Microsoft Windows Containers 
+- Windows Server Core & Nano Server Images
 
 ### Azure services used
 
-- AKS
+- Azure Container Service (ACS)
+- Azure Container Registry (ACR)
+- Azure Operations Management Suite
 
 ### Azure DevOps services used
 
