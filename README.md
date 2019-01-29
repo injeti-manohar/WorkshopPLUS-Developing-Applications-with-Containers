@@ -41,7 +41,9 @@ In this hand-on lab, you will be challenged to implement an end-to-end scenario 
 
 ### Related references, resources, and material
 
-- [PartUnlimited Sample](https://github.com/Microsoft/PartsUnlimited)
+- [Empower your application lifecycle with containers and Azure with Azure Container Service - Premier Subscription Needed](https://mslearningcampus.com/CourseAssignment/348161?returnUrl=https%3A%2F%2Fmslearningcampus.com%2FCourse%2FBrowseOnDemand%3FtagId%3D108%23%257B%2522pageIndex%2522%253A0%252C%2522pageSize%2522%253A20%252C%2522filter%2522%253A%2522containers%2522%252C%2522matchType%2522%253A%25220%2522%252C%2522clubIds%2522%253A%255B572%252C572%252C578%252C615%255D%252C%2522tagInputIds%2522%253A%255B%2522group14tag108%2522%252C%2522group4tag16%2522%255D%252C%2522tagsJson%2522%253A%2522%255B%257B%255C%2522Id%255C%2522%253A108%252C%255C%2522Name%255C%2522%253A%255C%2522Step-by-Step%2520Labs%255C%2522%257D%252C%257B%255C%2522Id%255C%2522%253A16%252C%255C%2522Name%255C%2522%253A%255C%2522Azure%255C%2522%257D%255D%2522%252C%2522bookmarks%2522%253Anull%257D&returnLinkText=Course%20Catalog)
+
+- [Containers on Azure in a practical way - Premier Subscription Needed](https://mslearningcampus.com/CourseAssignment/348163?returnUrl=https%3A%2F%2Fmslearningcampus.com%2FCourse%2FBrowseOnDemand%3FtagId%3D108%23%257B%2522pageIndex%2522%253A0%252C%2522pageSize%2522%253A20%252C%2522filter%2522%253A%2522containers%2522%252C%2522matchType%2522%253A%25220%2522%252C%2522clubIds%2522%253A%255B572%252C578%252C615%255D%252C%2522tagInputIds%2522%253A%255B%2522group14tag108%2522%252C%2522group4tag16%2522%255D%252C%2522tagsJson%2522%253A%2522%255B%257B%255C%2522Id%255C%2522%253A108%252C%255C%2522Name%255C%2522%253A%255C%2522Step-by-Step%2520Labs%255C%2522%257D%252C%257B%255C%2522Id%255C%2522%253A16%252C%255C%2522Name%255C%2522%253A%255C%2522Azure%255C%2522%257D%255D%2522%252C%2522bookmarks%2522%253Anull%257D&returnLinkText=Course%20Catalog)
 
 # Disclaimer
 
