@@ -47,7 +47,7 @@ In this hand-on lab, you will be challenged to implement an end-to-end scenario 
 
 # Disclaimer
 
-This is the lab portion of Microsoft Premier Services - WorkshopPLUS - Developing Applications with Containers. All code in this repo is intended for that purpose.
+This is the lab portion of Microsoft Premier/Unified Support Services - WorkshopPLUS - Developing Applications with Containers. All code in this repo is intended for that purpose.
 
 # Contact 
 
